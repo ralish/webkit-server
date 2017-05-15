@@ -27,7 +27,7 @@ class build_server(_build):
     os.system('qmake ' + ' '.join(args) + ' && make')
     try:
       os.remove(os.path.join(self.build_purelib, 'webkit_server'))
-    except: pass      
+    except: pass
     try:
       os.remove(os.path.join(self.build_platlib, 'webkit_server'))
     except: pass
@@ -41,7 +41,7 @@ class build_server(_build):
     shutil.copy('src/webkit_server', self.build_platlib)
 
 setup(name='webkit-server',
-      version='1.0',
+      version='1.0.0.post1',
       description='a Webkit-based, headless web client',
       author='Niklas Baumstark',
       author_email='niklas.baumstark@gmail.com',
